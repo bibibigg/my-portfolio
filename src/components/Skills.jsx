@@ -18,10 +18,10 @@ export default function Skills() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="text-left mb-12 w-4xl"
+        className="text-left mb-12 w-full max-w-6xl"
       >
         <div className="border-b-2 border-gray-200 dark:border-gray-700 pb-4 mb-6">
-          <h1 className="text-6xl md:text-8xl font-black dark:text-white tracking-tight">
+          <h1 className="text-6xl md:text-8xl font-black dark:text-white tracking-tight break-words">
             Skills
           </h1>
         </div>

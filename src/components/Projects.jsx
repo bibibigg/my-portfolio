@@ -13,11 +13,13 @@ export default function Projects() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className=" border-b-2 w-4xl border-gray-200 dark:border-gray-700 pb-4 mb-6"
+        className="text-left mb-12 w-full max-w-6xl"
       >
-        <h1 className="text-6xl md:text-8xl font-black dark:text-white tracking-tight">
-          Project
-        </h1>
+        <div className="border-b-2 border-gray-200 dark:border-gray-700 pb-4 mb-6">
+          <h1 className="text-6xl md:text-8xl font-black dark:text-white tracking-tight break-words">
+            Project
+          </h1>
+        </div>
       </motion.div>
 
       <ProjectGrid isDark={isDark} projects={projects} />
