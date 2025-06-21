@@ -51,7 +51,7 @@ export default function MainNavigation() {
       >
         <nav className="flex w-full justify-between gap-4 ">
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-1">
+            <h1 className="text-2xl font-bold text-orange-500 mb-1">
               Son Byeongjin
             </h1>
           </div>

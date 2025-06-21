@@ -2,20 +2,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 export default function HamburgerButton({ handleListToggle, isShowList }) {
-  function scrollToSection(sectionId) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      const headerHeight = 64; // 헤더 높이 (h-16 = 64px)
-      const elementPosition = section.offsetTop - headerHeight;
-
-      window.scrollTo({
-        top: elementPosition,
-        behavior: "smooth",
-      });
-    }
-    handleListToggle(); // 메뉴 닫기
-  }
-
   return (
     <div className="flex items-center justify-center translate-y-0.5">
       <button
@@ -73,36 +59,40 @@ export default function HamburgerButton({ handleListToggle, isShowList }) {
           >
             <ul className="flex flex-col gap-2 p-2">
               <li>
-                <button
-                  onClick={() => scrollToSection("home")}
+                <a
+                  href="#home"
+                  onClick={handleListToggle}
                   className="block w-full text-left px-4 py-2 hover:bg-gray-100"
                 >
                   Home
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => scrollToSection("about")}
+                <a
+                  href="#about"
+                  onClick={handleListToggle}
                   className="block w-full text-left px-4 py-2 hover:bg-gray-100"
                 >
                   About
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => scrollToSection("skills")}
+                <a
+                  href="#skills"
+                  onClick={handleListToggle}
                   className="block w-full text-left px-4 py-2 hover:bg-gray-100"
                 >
                   Skills
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => scrollToSection("projects")}
+                <a
+                  href="#projects"
+                  onClick={handleListToggle}
                   className="block w-full text-left px-4 py-2 hover:bg-gray-100"
                 >
                   Projects
-                </button>
+                </a>
               </li>
             </ul>
           </motion.div>

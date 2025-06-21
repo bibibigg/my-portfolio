@@ -2,10 +2,7 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <div
-      id="about"
-      className="min-h-screen  py-20 px-4 relative overflow-hidden"
-    >
+    <div className="min-h-screen  py-20 px-4 relative overflow-hidden">
       <div className="max-w-4xl mx-auto relative z-10">
         {/* Main Title */}
         <motion.div

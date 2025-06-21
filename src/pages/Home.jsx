@@ -7,11 +7,21 @@ import Contact from "../components/Contact";
 export default function HomePage() {
   return (
     <>
-      <MainIntro />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
+      <section id="home">
+        <MainIntro />
+      </section>
+      <section id="about">
+        <About />
+      </section>
+      <section id="skills">
+        <Skills />
+      </section>
+      <section id="projects">
+        <Projects />
+      </section>
+      <section>
+        <Contact />
+      </section>
     </>
   );
 }

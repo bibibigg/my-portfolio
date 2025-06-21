@@ -7,10 +7,7 @@ export default function Projects() {
   const { isDark } = useSelector((state) => state.ui);
 
   return (
-    <div
-      id="projects"
-      className="flex flex-col min-h-screen items-center justify-center gap-5  pb-20"
-    >
+    <div className="flex flex-col min-h-screen items-center justify-center gap-5  pb-20">
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}

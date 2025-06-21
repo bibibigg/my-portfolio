@@ -12,10 +12,7 @@ export default function Skills() {
   }
 
   return (
-    <div
-      id="skills"
-      className="flex flex-col min-h-screen items-center justify-center gap-5"
-    >
+    <div className="flex flex-col min-h-screen items-center justify-center gap-5">
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}

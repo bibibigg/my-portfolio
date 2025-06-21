@@ -8,7 +8,7 @@ export const projects = [
     id: 1,
     title: "Show Pet",
     description:
-      "반려동물 사진을 등록하여 다른 사용자와 소통할 수 있는 웹 서비스",
+      "반려동물 사진을 등록하여 다른 사용자와 소통할 수 있는 웹 프로젝트",
     tags: ["hTML", "CSS", "Javascript", "Java", "Springboot", "NaverCloud"],
     image: showPetImage,
     github: "https://github.com/ncp7-team2/show_pet",
@@ -18,7 +18,7 @@ export const projects = [
   {
     id: 2,
     title: "CarroThunder",
-    description: "중고 거래 플랫폼",
+    description: "개인 거래 및 채팅 플랫폼 제작 프로젝트",
     tags: ["React", "Java", "Springboot", "Docker", "Jenkins", "NaverCloud"],
     image: carrotThunderImage,
     github: "https://github.com/NC7-CarroThunder",

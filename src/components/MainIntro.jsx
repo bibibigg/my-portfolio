@@ -16,7 +16,6 @@ export default function MainIntro() {
           y: yIntro,
           opacity: opacityIntro,
         }}
-        id="home"
         className=" min-h-screen flex flex-col justify-center text-center px-4 max-w-4xl  mx-auto"
       >
         <motion.h1
@@ -38,7 +37,7 @@ export default function MainIntro() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent"
+            className="text-orange-500"
           >
             손병진
           </motion.span>
