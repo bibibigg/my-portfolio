@@ -12,7 +12,7 @@ function Tab({ isSelected, category, onSelect, children }) {
     >
       <li className="relative">
         <button
-          className={`flex cursor-pointer items-center border-none bg-transparent px-2 py-2 text-lg font-semibold text-gray-500 shadow-none  hover:text-gray-900 dark:text-gray-400 dark:hover:text-white ${
+          className={`flex cursor-pointer items-center border-none bg-transparent px-2 py-2 text-sm sm:text-lg font-semibold text-gray-500 shadow-none  hover:text-gray-900 dark:text-gray-400 dark:hover:text-white ${
             isSelected ? "text-gray-900 dark:text-white" : ""
           }`}
           onClick={onSelect}

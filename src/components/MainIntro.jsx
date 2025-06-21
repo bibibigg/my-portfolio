@@ -22,7 +22,7 @@ export default function MainIntro() {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0 }}
-          className="text-5xl md:text-7xl font-bold mb-6"
+          className="text-[42px] md:text-7xl font-bold mb-6"
         >
           <motion.span
             initial={{ opacity: 0, y: -20 }}
