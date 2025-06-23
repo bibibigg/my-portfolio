@@ -1,11 +1,23 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+// import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { uiActions } from "../store/UI/uiSlice";
 import { Icon } from "@iconify/react";
 import { FaGithub } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 
 export default function ProjectGrid({ projects, isDark }) {
   const [hoveredProject, setHoveredProject] = useState(null);
+
+  // const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  function handleClickProject(id) {
+    dispatch(uiActions.openModal());
+    dispatch(uiActions.selectProject(id));
+    // navigate(`/project/${id}`);
+  }
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -46,6 +58,7 @@ export default function ProjectGrid({ projects, isDark }) {
           whileHover={{ y: -10, scale: 1.02 }}
           onHoverStart={() => setHoveredProject(project.id)}
           onHoverEnd={() => setHoveredProject(null)}
+          onClick={() => handleClickProject(project.id)}
           className="group relative overflow-hidden rounded-2xl bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 shadow-xl hover:shadow-2xl"
         >
           {/* Background Gradient */}

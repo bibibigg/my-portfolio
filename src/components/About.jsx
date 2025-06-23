@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export default function About() {
   return (
     <div className="min-h-screen  py-20 px-4 relative overflow-hidden">
-      <div className="max-w-4xl mx-auto relative z-10">
+      <div className="max-w-4xl mx-auto relative z-5">
         {/* Main Title */}
         <motion.div
           initial={{ opacity: 0, y: 100 }}

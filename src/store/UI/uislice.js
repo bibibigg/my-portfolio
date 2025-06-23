@@ -7,6 +7,7 @@ const uiSlice = createSlice({
     isShowModal: false,
     isDark: false,
     isShowList: false,
+    selectedProject: null,
   },
   reducers: {
     showNotification(state, action) {
@@ -30,6 +31,12 @@ const uiSlice = createSlice({
     },
     toggleShowList(state, action) {
       state.isShowList = !state.isShowList;
+    },
+    selectProject(state, action) {
+      state.selectedProject = action.payload;
+    },
+    clearSelectedProject(state, action) {
+      state.selectedProject = null;
     },
   },
 });
