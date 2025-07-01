@@ -127,6 +127,12 @@ export const projects = [
     color: "from-pink-500 to-violet-600",
     item: [
       {
+        title: "stacking context 문제 해결",
+        content: [
+          "skills에서 아이콘을 hover시 설명 텍스트가 다른 요소에 가려지는 문제를 발견하고 부모 요소에 스택 문맥이 이미 형성되어 있어 자식 요소는 부모요소보다 높게 올 수 없기에 hover시 부모요소의 z-index를 높임으로써 텍스트가 보이도록 함",
+        ],
+      },
+      {
         title: "vercel을 이용한 배포",
         content: [
           "Vercel과 GitHub 연동을 통해 자동화된 CI/CD 배포 파이프라인 구축 및 운영",
