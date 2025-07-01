@@ -56,7 +56,7 @@ export default function ProjectModal({ onClose, project }) {
           </div>
         </div>
         {/* 구분선 */}
-        <div className="w-full h-0.5 min-h-0.5 bg-gradient-to-r from-blue-200 via-gray-300 to-purple-200 dark:from-blue-900 dark:via-gray-700 dark:to-purple-900 my-4 md:my-6 rounded-full"></div>
+        <div className="w-full h-0.5 min-h-0.5 bg-gray-300 dark:bg-gray-500 my-4 md:my-6 rounded-full"></div>
         {/* 본문 */}
         {project && project.item && (
           <ol className="list-decimal pl-5 space-y-6">

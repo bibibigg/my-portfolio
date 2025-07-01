@@ -1,4 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useSearchParams } from "react-router-dom";
 
 export default function MainIntro() {
   const { scrollY } = useScroll();
@@ -8,7 +9,12 @@ export default function MainIntro() {
     [0, 200, 300, 500],
     [1, 0.5, 0.5, 0]
   );
-
+  const [searchParams] = useSearchParams();
+  let title = "프론트엔드 개발자";
+  const role = searchParams.get("role");
+  if (role === "publisher") {
+    title = "웹 퍼블리셔";
+  }
   return (
     <>
       <motion.div
@@ -30,7 +36,7 @@ export default function MainIntro() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-gray-800 dark:text-white"
           >
-            프론트엔드 개발자
+            {title}
           </motion.span>
           <br />
           <motion.span
