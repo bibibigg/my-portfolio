@@ -9,6 +9,7 @@ import ProjectModal from "../components/modals/ProjectModal";
 import { projects as projectsData } from "../data/projects";
 
 export default function HomePage() {
+  const { isDark } = useSelector((state) => state.ui);
   const { isShowModal, selectedProject } = useSelector((state) => state.ui);
   const dispatch = useDispatch();
 
@@ -22,7 +23,11 @@ export default function HomePage() {
   return (
     <>
       {isShowModal && (
-        <ProjectModal project={project} onClose={handleCloseModal} />
+        <ProjectModal
+          project={project}
+          onClose={handleCloseModal}
+          isDark={isDark}
+        />
       )}
       <section id="home">
         <MainIntro />

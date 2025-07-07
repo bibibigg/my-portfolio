@@ -6,37 +6,6 @@ import { Link } from "react-router-dom";
 export default function ListButton({ isShowList, isDark, handleListToggle }) {
   return (
     <div className="relative flex items-center">
-      <AnimatePresence mode="wait">
-        {!isShowList ? (
-          <motion.div
-            key="list"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-          >
-            <CiCircleList
-              size={32}
-              onClick={handleListToggle}
-              color={isDark ? "white" : "black"}
-            />
-          </motion.div>
-        ) : (
-          <motion.div
-            key="close"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-          >
-            <AiOutlineClose
-              size={32}
-              onClick={handleListToggle}
-              color={isDark ? "white" : "black"}
-            />
-          </motion.div>
-        )}
-      </AnimatePresence>
       <AnimatePresence>
         {isShowList && (
           <motion.div

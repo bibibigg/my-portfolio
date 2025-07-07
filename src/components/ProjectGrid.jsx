@@ -49,7 +49,7 @@ export default function ProjectGrid({ projects, isDark }) {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
-      className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl w-full"
+      className="flex flex-col gap-8 max-w-6xl w-full"
     >
       {projects.map((project) => (
         <motion.div
@@ -77,8 +77,7 @@ export default function ProjectGrid({ projects, isDark }) {
 
             {/* Floating Action Buttons */}
 
-            {/* github button */}
-            <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0">
+            {/* <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0">
               <motion.a
                 href={project.github}
                 whileHover={{ scale: 1.1 }}
@@ -92,7 +91,6 @@ export default function ProjectGrid({ projects, isDark }) {
                 )}
               </motion.a>
 
-              {/* youtube button */}
               {project.demo !== "" && (
                 <motion.a
                   href={project.demo}
@@ -107,7 +105,7 @@ export default function ProjectGrid({ projects, isDark }) {
                   )}
                 </motion.a>
               )}
-            </div>
+            </div> */}
           </div>
 
           {/* Project Content */}

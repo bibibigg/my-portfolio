@@ -1,6 +1,9 @@
 import Modal from "../UI/Modal";
+import { FaGithub } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import InfoItem from "./InfoItem";
 
-export default function ProjectModal({ onClose, project }) {
+export default function ProjectModal({ onClose, project, isDark }) {
   return (
     <Modal onClose={onClose}>
       <div className="flex flex-col gap-6">
@@ -23,7 +26,7 @@ export default function ProjectModal({ onClose, project }) {
         </div>
         {/* 프로젝트 정보 */}
         <div className="flex flex-wrap justify-center gap-6 bg-gray-50 dark:bg-gray-800 rounded-lg p-4 mb-2">
-          <div className="flex flex-col items-center min-w-[90px]">
+          <div className="flex flex-col items-center w-full min-w-[90px]">
             <span className="text-xs text-gray-500 dark:text-gray-400 mb-1">
               기술스택
             </span>
@@ -38,21 +41,35 @@ export default function ProjectModal({ onClose, project }) {
               ))}
             </div>
           </div>
-          <div className="flex flex-col items-center min-w-[90px]">
-            <span className="text-xs text-gray-500 dark:text-gray-400 mb-1">
-              참여인원
-            </span>
-            <div className="text-base font-semibold text-gray-800 dark:text-white">
-              {project?.member}
-            </div>
-          </div>
-          <div className="flex flex-col items-center min-w-[90px]">
-            <span className="text-xs text-gray-500 dark:text-gray-400 mb-1">
-              기간
-            </span>
-            <div className="text-base font-semibold text-gray-800 dark:text-white">
-              {project?.period}
-            </div>
+
+          <div className="flex gap-2 items-center justify-center">
+            <InfoItem label="참여인원" value={project?.member} />
+
+            <InfoItem label="기간" value={project?.period} />
+
+            {project.github && (
+              <InfoItem label="github">
+                <a href={project.github}>
+                  {isDark ? (
+                    <FaGithub color="white" size={25} />
+                  ) : (
+                    <FaGithub size={25} />
+                  )}
+                </a>
+              </InfoItem>
+            )}
+
+            {project.demo && (
+              <InfoItem label="시연영상">
+                <a href={project.demo}>
+                  {isDark ? (
+                    <FaYoutube color="white" size={25} />
+                  ) : (
+                    <FaYoutube size={25} />
+                  )}
+                </a>
+              </InfoItem>
+            )}
           </div>
         </div>
         {/* 구분선 */}

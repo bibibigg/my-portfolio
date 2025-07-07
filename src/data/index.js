@@ -1,1 +1,1 @@
-export { skillsData, categories } from "./skills.js";
+// export { skillsData, categories } from "./skills.js";
