@@ -42,7 +42,7 @@ export default function ProjectModal({ onClose, project, isDark }) {
             </div>
           </div>
 
-          <div className="flex gap-2 items-center justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
             <InfoItem label="참여인원" value={project?.member} />
 
             <InfoItem label="기간" value={project?.period} />

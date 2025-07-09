@@ -1,11 +1,11 @@
 export default function InfoItem({ label, value, children }) {
   return (
-    <div className="flex flex-col items-center min-w-[90px]">
+    <div className="flex flex-col items-center ">
       <span className="text-xs text-gray-500 dark:text-gray-400 mb-1">
         {label}
       </span>
       {value && (
-        <div className="text-base font-semibold text-gray-800 dark:text-white">
+        <div className="text-base font-semibold text-center text-gray-800 dark:text-white">
           {value}
         </div>
       )}
