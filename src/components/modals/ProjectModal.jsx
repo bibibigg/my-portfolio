@@ -53,7 +53,7 @@ export default function ProjectModal({ onClose, project, isDark }) {
                   {isDark ? (
                     <FaGithub color="white" size={25} />
                   ) : (
-                    <FaGithub size={25} />
+                    <FaGithub color="black" size={25} />
                   )}
                 </a>
               </InfoItem>
@@ -65,7 +65,7 @@ export default function ProjectModal({ onClose, project, isDark }) {
                   {isDark ? (
                     <FaYoutube color="white" size={25} />
                   ) : (
-                    <FaYoutube size={25} />
+                    <FaYoutube color="red" size={25} />
                   )}
                 </a>
               </InfoItem>
