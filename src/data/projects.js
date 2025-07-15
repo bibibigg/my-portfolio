@@ -1,9 +1,48 @@
-import showPetImage from "../assets/showPet.png";
 import carrotThunderImage from "../assets/CarrotThunder.png";
 import myPortfolioImage from "../assets/my-portfolio.png";
 import SnartPlateImage from "../assets/SmartPlate.png";
+import chatting from "../assets/chatting.PNG";
 
 export const projects = [
+  {
+    id: 4,
+    title: "AiChat",
+    description:
+      "AI툴을 적극 활용한 채팅방 구현 및 GeminiAPI를 사용한 AI와의 대화",
+    tags: [
+      "toyProject",
+      "Cousor",
+      "Mysql",
+      "GeminiAPI",
+      "Node.js",
+      "socket.io",
+      "React",
+      "TypeScript",
+      "React-Router",
+      "Tailwind CSS",
+      "vite",
+    ],
+    member: "개인",
+    period: "2025.7.15",
+    image: chatting,
+    github: "https://github.com/bibibigg/aichat",
+    demo: "",
+    color: "from-pink-500 to-violet-600",
+    item: [
+      {
+        title: "실시간 AI 채팅 기능",
+        content: [
+          "구현된 채팅기능에 GeminiAPI를 사용하여 모든 채팅방에 AI유저가 상주하여 혼자 있더라도 채팅을 할 수 있도록 구현",
+        ],
+      },
+      {
+        title: "Cursor를 이용한 풀스택 구현",
+        content: [
+          "Cursor를 적극 이용하여 DB설계와 백엔드, 프론트엔드의 기능구현을 진행하여 매우 짧은 기간 내 기능을 구현",
+        ],
+      },
+    ],
+  },
   {
     id: 1,
     title: "my-portfolio",

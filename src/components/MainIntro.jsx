@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useSearchParams } from "react-router-dom";
+import ImageSliderTest from "./imageSliderTest";
 
 export default function MainIntro() {
   const { scrollY } = useScroll();
@@ -15,8 +16,13 @@ export default function MainIntro() {
   if (role === "publisher") {
     title = "웹 퍼블리셔";
   }
+  if (role === "fullstack") {
+    title = "성장하는 개발자";
+  }
+
   return (
     <>
+      <ImageSliderTest />
       <motion.div
         style={{
           y: yIntro,

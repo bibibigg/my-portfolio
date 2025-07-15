@@ -3,9 +3,6 @@ import { useState } from "react";
 // import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { uiActions } from "../store/UI/uiSlice";
-import { Icon } from "@iconify/react";
-import { FaGithub } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
 
 export default function ProjectGrid({ projects, isDark }) {
   const [hoveredProject, setHoveredProject] = useState(null);
@@ -49,7 +46,7 @@ export default function ProjectGrid({ projects, isDark }) {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
-      className="flex flex-col gap-8 max-w-6xl w-full"
+      className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-96 md:max-w-5xl"
     >
       {projects.map((project) => (
         <motion.div
@@ -71,7 +68,7 @@ export default function ProjectGrid({ projects, isDark }) {
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              className="w-full h-full object-cover group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 

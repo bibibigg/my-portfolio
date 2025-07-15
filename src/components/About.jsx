@@ -19,7 +19,7 @@ export default function About() {
 
         <div className="space-y-12">
           <motion.div
-            initial={{ opacity: 0, x: -100, rotate: -1 }}
+            initial={{ opacity: 0, x: -100, rotate: -0.5 }}
             whileInView={{
               opacity: 1,
               x: 0,
@@ -33,17 +33,18 @@ export default function About() {
               01
             </div>
             <h1 className="text-4xl md:text-5xl font-black text-black dark:text-gray-200 mb-6 uppercase tracking-tight">
-              개발을 시작하며
+              나의 가치관
             </h1>
             <p className="text-lg md:text-xl leading-relaxed text-gray-800 dark:text-gray-200 font-medium">
-              직관적으로 다가오는 프론트엔드에 관심이 생기게 되어 사용자에게
-              좋은 경험을 주기 위해 프론트엔드를 공부하며 고민하고 있습니다.
+              새로운 기술을 배우고 문제를 해결하는 과정에서 큰 즐거움을 느끼며
+              단순히 기능을 구현하는 것을 넘어 사용자가 더 쉽고 편리하게
+              서비스를 이용할 수 있도록 고민합니다.
             </p>
           </motion.div>
 
           {/* Second Section */}
           <motion.div
-            initial={{ opacity: 0, x: 100, rotate: 1 }}
+            initial={{ opacity: 0, x: 100, rotate: 0.5 }}
             whileInView={{
               opacity: 1,
               x: 0,
