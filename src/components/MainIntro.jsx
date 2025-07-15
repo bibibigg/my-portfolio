@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useSearchParams } from "react-router-dom";
-import ImageSliderTest from "./imageSliderTest";
+// import ImageSliderTest from "./imageSliderTest";
 
 export default function MainIntro() {
   const { scrollY } = useScroll();
@@ -22,7 +22,7 @@ export default function MainIntro() {
 
   return (
     <>
-      <ImageSliderTest />
+      {/* <ImageSliderTest /> */}
       <motion.div
         style={{
           y: yIntro,
