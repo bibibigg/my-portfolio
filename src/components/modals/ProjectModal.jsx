@@ -85,7 +85,10 @@ export default function ProjectModal({ onClose, project, isDark }) {
                 {item.content && (
                   <ul className="list-disc pl-5 mt-1 space-y-1 text-gray-700 dark:text-gray-200 text-base">
                     {item.content.map((text, contentIndex) => (
-                      <li key={`project-desc-${index}-${contentIndex}`}>
+                      <li
+                        className="whitespace-pre-line"
+                        key={`project-desc-${index}-${contentIndex}`}
+                      >
                         {text}
                       </li>
                     ))}
