@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 
-const LiquidGlass = ({ width, height }) => {
+const LiquidGlass = ({ width, height, isDark }) => {
   // const containerRef = useRef(null);
   // const svgRef = useRef(null);
   const canvasRef = useRef(null);
@@ -171,14 +171,26 @@ const LiquidGlass = ({ width, height }) => {
           height: `${height}px`,
           overflow: "hidden",
           borderRadius: "150px",
-          boxShadow:
-            "0 4px 8px rgba(0, 0, 0, 0.25), 0 -10px 25px inset rgba(0, 0, 0, 0.15)",
+          boxShadow: isDark
+            ? `
+  0 4px 24px 0 rgba(0, 100, 255, 0.10),
+  0 1.5px 8px 0 rgba(255,255,255,0.18),
+  0 0 0 1.5px rgba(255,255,255,0.18) inset,
+  0 -8px 32px 0 inset rgba(0,0,0,0.10)
+`
+            : `
+  0 8px 32px 0 rgba(0,0,0,0.15),      /* 더 진하고 넓은 외부 그림자 */
+  0 2px 12px 0 rgba(0,0,0,0.12),      /* 추가 외부 그림자 */
+  0 0 0 2px rgba(255,255,255,0.18) inset,  /* 내부 밝은 라인 */
+  0 -8px 32px 0 inset rgba(0,0,0,0.10)     /* 내부 깊이감 */
+`,
           backdropFilter: `url(#${id.current}_filter) blur(0.25px) contrast(1.2) brightness(1.05) saturate(1.1)`,
           zIndex: 9999,
           pointerEvents: "none",
         }}
       />
-
+      {/* "0 4px 8px rgba(0, 0, 0, 0.25), 0 -10px 25px inset rgba(0, 0, 0, 0.15)", */}
+      {/* backdropFilter: `url(#${id.current}_filter) blur(0.25px) contrast(1.2) brightness(1.05) saturate(1.1)`, */}
       {/* Hidden Canvas for Displacement Map */}
       <canvas ref={canvasRef} style={{ display: "none" }} />
     </>

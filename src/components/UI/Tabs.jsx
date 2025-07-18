@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
+import { useSelector } from "react-redux";
 import LiquidGlass from "./liquid-glass";
 import useResponsiveGlassSize from "../../hooks/useResponsiveGlassSize";
 
 // import Badge from "./Badge.jsx";
 
-function Tab({ isSelected, category, onSelect, children }) {
+function Tab({ isDark, isSelected, category, onSelect, children }) {
   const glassSize = useResponsiveGlassSize();
   return (
     <motion.div
@@ -29,7 +30,11 @@ function Tab({ isSelected, category, onSelect, children }) {
               layoutId="liquid-galss"
               className="absolute pointer-events-none left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
             >
-              <LiquidGlass width={glassSize.width} height={glassSize.height} />
+              <LiquidGlass
+                isDark={isDark}
+                width={glassSize.width}
+                height={glassSize.height}
+              />
             </motion.div>
             {/* <motion.div
               layoutId="tabs-underline"
@@ -47,10 +52,12 @@ export default function CategoryTabs({
   selectedCategory,
   onSelectCategory,
 }) {
+  const isDark = useSelector((state) => state.ui.isDark);
   return (
     <menu className="mb-4 flex list-none justify-center gap-4 p-0">
       {categories.map((category) => (
         <Tab
+          isDark={isDark}
           key={category}
           isSelected={selectedCategory === category}
           onSelect={() => onSelectCategory(category)}
