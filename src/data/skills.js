@@ -54,13 +54,13 @@ export const skillsData = [
     description: "React를 위한 애니메이션 라이브러리",
   },
   {
-    category: "환경 및 배포",
+    category: "개발 환경",
     skills: "vite",
     icon: "devicon:vitejs",
     description: "빠르고 간편한 프론트엔드 개발 환경 및 번들러",
   },
   {
-    category: "환경 및 배포",
+    category: "개발 환경",
     skills: "github",
     icon: "devicon:github",
     description: "코드 버전 관리 및 협업을 위한 플랫폼",
