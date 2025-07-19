@@ -16,8 +16,8 @@ export default function Layout() {
   return (
     <div className="min-h-screen flex flex-col">
       <MainNavigation />
-      <main className="flex-1 flex flex-col pt-16 items-center bg-white dark:bg-[#242424]  transition-all duration-300 ease-in-out justify-center px-4">
-        <div className="w-full max-w-7xl">
+      <main className="flex-1 flex flex-col  items-center bg-white dark:bg-[#242424]  transition-all duration-300 ease-in-out justify-center px-4">
+        <div className="w-full">
           <Outlet />
         </div>
       </main>

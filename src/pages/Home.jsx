@@ -29,9 +29,7 @@ export default function HomePage() {
           isDark={isDark}
         />
       )}
-      <section id="home">
-        <MainIntro />
-      </section>
+      <MainIntro />
       <section id="about">
         <About />
       </section>
