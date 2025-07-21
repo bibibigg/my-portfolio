@@ -1,6 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 
 export default function About() {
   const aboutRef = useRef(null);
@@ -8,37 +7,28 @@ export default function About() {
     target: aboutRef,
     offset: ["start start", "end end"],
   });
-  const xFromRight = useTransform(scrollYProgress, [0, 0.5], ["100%", "0%"]);
-  const xFromLeft = useTransform(scrollYProgress, [0.5, 0.9], ["-100%", "0%"]);
-  const xFromRightOpacity = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
-  const xFromLeftOpacity = useTransform(scrollYProgress, [0.5, 0.9], [0, 1]);
 
-  const { ref: inViewRef, inView } = useInView({
-    threshold: 0.9, // 컴포넌트의 50%가 뷰포트에 들어오면 트리거
-    triggerOnce: false,
-  });
+  const titleOpacity = useTransform(scrollYProgress, [0, 0.2], [0, 1]);
+
+  const xFromRight = useTransform(scrollYProgress, [0, 0.5], ["100%", "0%"]);
+  const xFromRightOpacity = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
+
+  const xFromLeft = useTransform(scrollYProgress, [0.5, 0.9], ["-100%", "0%"]);
+  const xFromLeftOpacity = useTransform(scrollYProgress, [0.5, 0.9], [0, 1]);
 
   return (
     <section ref={aboutRef} className="relative min-h-[300vh]" id="about">
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: inView ? 1 : 0 }}
-        transition={{ duration: 0.8 }}
-        ref={inViewRef}
-        className="sticky top-16 min-h-screen py-20 px-4 overflow-hidden"
-      >
+      <div className="sticky top-16 min-h-screen py-20 px-4 overflow-hidden">
         <div className="max-w-4xl mx-auto relative z-5">
           {/* Main Title */}
-          <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: inView ? 1 : 0 }}
-            // whileInView={{ opacity: 1, x: 0 }}
-            className="text-center mb-30 "
-          >
-            <h2 className="text-6xl md:text-8xl font-black dark:text-white  mb-4 tracking-tight">
+          <div className="text-center mb-30 ">
+            <motion.h2
+              style={{ opacity: titleOpacity }}
+              className="text-6xl md:text-8xl font-black dark:text-white  mb-4 tracking-tight"
+            >
               ABOUT / ME
-            </h2>
-          </motion.div>
+            </motion.h2>
+          </div>
 
           <div className="space-y-12">
             <motion.div
@@ -78,7 +68,7 @@ export default function About() {
             </motion.div>
           </div>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }
