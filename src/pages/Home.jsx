@@ -30,9 +30,7 @@ export default function HomePage() {
         />
       )}
       <MainIntro />
-      <section id="about">
-        <About />
-      </section>
+      <About />
       <section id="skills">
         <Skills />
       </section>

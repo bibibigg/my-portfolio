@@ -11,7 +11,7 @@ export default function MainIntro() {
   //   [0, 100, 200, 300, 500, 800],
   //   [1, 1.5, 4, 10, 18, 170]
   // );
-  const YScale = useTransform(scrollY, [0, 800], [1, 250]);
+  const YScale = useTransform(scrollY, [0, 100, 200, 800], [1, 8, 60, 250]);
 
   const [origin, setOrigin] = useState("50% 50%");
   const nRef = useRef();
@@ -64,7 +64,7 @@ export default function MainIntro() {
   }
 
   return (
-    <section className="relative min-h-[300vh] overflow-hidden" id="home">
+    <section className="relative min-h-[100vh] overflow-hidden" id="home">
       {/* <ImageSliderTest /> */}
       <motion.div
         ref={parentRef}
@@ -73,8 +73,9 @@ export default function MainIntro() {
           scale: YScale,
           transformOrigin: origin,
         }}
-        className="sticky top-16 min-h-screen flex flex-col justify-center text-center px-4 w-full"
+        className="fixed top-16 min-h-screen flex flex-col justify-center text-center px-4 w-full"
       >
+        {/* <p>SON</p> */}
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
