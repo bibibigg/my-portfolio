@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 export default function MainIntroContent({
   isLargeScreen,
   scale,
+  opacity,
   origin,
   parentRef,
   title,
@@ -62,7 +63,7 @@ export default function MainIntroContent({
     return (
       <motion.div
         ref={parentRef}
-        style={{ scale: scale, transformOrigin: origin }}
+        style={{ scale: scale, transformOrigin: origin, opacity: opacity }}
         className="fixed top-16 min-h-screen flex flex-col justify-center text-center px-4 w-full"
       >
         {commonContent}

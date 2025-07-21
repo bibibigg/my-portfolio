@@ -20,6 +20,7 @@ export default function MainIntro() {
   const nRef = useRef();
   const parentRef = useRef();
   const YScale = useTransform(scrollY, [0, 100, 200, 800], [1, 8, 60, 250]);
+  const YOpcacity = useTransform(scrollY, [0, 500, 800], [1, 1, 0]);
   const origin = useDynamicTransformOrigin(nRef, parentRef);
   // ---
 
@@ -45,6 +46,7 @@ export default function MainIntro() {
       <MainIntroContent
         isLargeScreen={isLargeScreen}
         scale={YScale}
+        opacity={YOpcacity}
         origin={origin}
         parentRef={parentRef}
         title={title}
