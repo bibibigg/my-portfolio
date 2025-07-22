@@ -1,15 +1,13 @@
 import { motion } from "framer-motion";
 
-/**
- * 메인 인트로의 UI를 표시하는 프레젠테이셔널 컴포넌트.
- * 모든 상태와 로직은 부모 컴포넌트로부터 props로 전달받습니다.
- */
 export default function MainIntroContent({
   isLargeScreen,
-  scale,
+  left,
+  right,
+  // scale,
   opacity,
-  origin,
-  parentRef,
+  // origin,
+  // parentRef,
   title,
 }) {
   const commonContent = (
@@ -18,35 +16,32 @@ export default function MainIntroContent({
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0 }}
-        className="text-[42px] md:text-7xl font-bold mb-6"
+        className="text-[42px] md:text-7xl w-full font-bold mb-6"
       >
         <motion.span
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-gray-800 dark:text-white"
+          style={isLargeScreen ? { x: left } : { x: 0 }}
+          className="inline-block text-gray-800 dark:text-white"
         >
           {title}
         </motion.span>
         <br />
         <motion.span
+          style={isLargeScreen ? { x: right } : { x: 0 }}
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-orange-500"
+          className="inline-block"
         >
-          손병진
-        </motion.span>
-        <motion.span
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-          className="text-gray-800 dark:text-white"
-        >
-          입니다.
+          <p className="dark:text-white text-gray-800">
+            <span className="text-yellow-500 dark:text-yellow-300">손병진</span>{" "}
+            입니다
+          </p>
         </motion.span>
       </motion.h1>
-      <motion.p
+      {/* <motion.p
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.8 }}
@@ -55,15 +50,15 @@ export default function MainIntroContent({
         사용자에게 좋은 경험을 주기 위해 고민하고
         <br />
         성장할 수 있는 개발자가 되기위해 노력하고 있습니다.
-      </motion.p>
+      </motion.p> */}
     </>
   );
 
   if (isLargeScreen) {
     return (
       <motion.div
-        ref={parentRef}
-        style={{ scale: scale, transformOrigin: origin, opacity: opacity }}
+        // ref={parentRef}
+        style={{ opacity: opacity }}
         className="fixed top-16 min-h-screen flex flex-col justify-center text-center px-4 w-full"
       >
         {commonContent}

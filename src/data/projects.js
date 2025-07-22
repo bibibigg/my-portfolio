@@ -64,9 +64,21 @@ export const projects = [
     color: "from-pink-500 to-violet-600",
     item: [
       {
+        title: "커스텀 훅 사용을 통한 코드 분리 및 유지보수성 향상",
+        content: [
+          "Skils탭 버튼의 크기 조정 로직을 커스텀 훅으로 분리하여 사이즈 관련 코드를 명확히 구조화하고 유지보수를 용이하게 관리",
+        ],
+      },
+      {
         title: "stacking context 문제 해결",
         content: [
           "skills에서 아이콘을 hover시 설명 텍스트가 다른 요소에 가려지는 문제를 발견하고 부모 요소에 스택 문맥이 이미 형성되어 있어 자식 요소는 부모요소보다 높게 올 수 없기에 hover시 부모요소의 z-index를 높임으로써 텍스트가 보이도록 함",
+        ],
+      },
+      {
+        title: "Redux를 통한 전역상태 관리",
+        content: [
+          "다크모드, 모달 상태, 선택된 프로젝트 정보 등을 Redux를 통해 전역으로 관리",
         ],
       },
       {
@@ -76,9 +88,9 @@ export const projects = [
         ],
       },
       {
-        title: "Framer Motion을 통한 애니메이션",
+        title: "Fremer Motion을 사용한 애니메이션 구현",
         content: [
-          "스크롤 위치에 따라 요소가 자연스럽게 나타나는 애니메이션 효과 구현",
+          "스크롤 위치에 반응하여 요소가 애니메이션되도록 처리 하였으며 반응형 웹 환경에 맞춰 애니메이션을 조건부로 적용, Intersection Observer를 시도하였으나 useScroll에서 사용하는 ref와 충돌하여 제거 후 구현방식을 완전한 useScroll기반 방식으로 전환",
           "layoutId를 활용해 탭 전환 시 언더라인이 부드럽게 이동하는 애니메이션 적용",
         ],
       },

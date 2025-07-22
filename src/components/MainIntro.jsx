@@ -1,12 +1,12 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useSearchParams } from "react-router-dom";
-import { useRef, useState, useEffect } from "react";
-import useDynamicTransformOrigin from "../hooks/useDynamicTransformOrigin";
+import { useState, useEffect } from "react";
 import MainIntroContent from "./MainIntroContent";
 
 export default function MainIntro() {
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 1280);
 
+  // 브라우저 사이즈 체크
   useEffect(() => {
     const handleResize = () => {
       setIsLargeScreen(window.innerWidth >= 1280);
@@ -15,13 +15,11 @@ export default function MainIntro() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // --- Hooks for animation ---
+  // --- 스크롤 애니메이션 훅 ---
   const { scrollY } = useScroll();
-  const nRef = useRef();
-  const parentRef = useRef();
-  const YScale = useTransform(scrollY, [0, 100, 200, 800], [1, 8, 60, 250]);
+  const xLeft = useTransform(scrollY, [0, 300], ["0%", "200%"]);
+  const xRight = useTransform(scrollY, [0, 300], ["0%", "-245%"]);
   const YOpcacity = useTransform(scrollY, [0, 500, 800], [1, 1, 0]);
-  const origin = useDynamicTransformOrigin(nRef, parentRef);
   // ---
 
   const [searchParams] = useSearchParams();
@@ -33,22 +31,19 @@ export default function MainIntro() {
   } else if (role === "fullstack") {
     title = "성장하는 개발자";
   } else {
-    title = (
-      <span>
-        프론트
-        <span ref={isLargeScreen ? nRef : null}>엔</span>드 개발자
-      </span>
-    );
+    title = <span>프론트엔드 개발자</span>;
   }
 
   return (
     <section className="relative min-h-[100vh] overflow-hidden" id="home">
       <MainIntroContent
         isLargeScreen={isLargeScreen}
-        scale={YScale}
+        // scale={YScale}
+        left={xLeft}
+        right={xRight}
         opacity={YOpcacity}
-        origin={origin}
-        parentRef={parentRef}
+        // origin={origin}
+        // parentRef={parentRef}
         title={title}
       />
     </section>
