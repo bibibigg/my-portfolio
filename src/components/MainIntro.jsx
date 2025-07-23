@@ -17,8 +17,8 @@ export default function MainIntro() {
 
   // --- 스크롤 애니메이션 훅 ---
   const { scrollY } = useScroll();
-  const xLeft = useTransform(scrollY, [0, 300], ["0%", "200%"]);
-  const xRight = useTransform(scrollY, [0, 300], ["0%", "-245%"]);
+  const xLeft = useTransform(scrollY, [0, 700], ["0%", "210%"]);
+  const xRight = useTransform(scrollY, [0, 700], ["0%", "-260%"]);
   const YOpcacity = useTransform(scrollY, [0, 500, 800], [1, 1, 0]);
   // ---
 
