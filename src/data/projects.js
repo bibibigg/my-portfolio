@@ -90,7 +90,7 @@ export const projects = [
       {
         title: "Fremer Motion을 사용한 애니메이션 구현",
         content: [
-          "스크롤 위치에 반응하여 요소가 애니메이션되도록 처리 하였으며 반응형 웹 환경에 맞춰 애니메이션을 조건부로 적용, Intersection Observer를 시도하였으나 useScroll에서 사용하는 ref와 충돌하여 제거 후 구현방식을 완전한 useScroll기반 방식으로 전환",
+          "스크롤 위치에 반응하여 요소가 애니메이션되도록 처리 하였으며 반응형 웹 환경에 맞춰 애니메이션을 조건부로 적용",
           "layoutId를 활용해 탭 전환 시 언더라인이 부드럽게 이동하는 애니메이션 적용",
         ],
       },
