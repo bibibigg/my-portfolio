@@ -2,6 +2,7 @@ import carrotThunderImage from "../assets/CarrotThunder.png";
 import myPortfolioImage from "../assets/my-portfolio.png";
 import SnartPlateImage from "../assets/SmartPlate.png";
 import chatting from "../assets/chatting.PNG";
+import { li } from "framer-motion/client";
 
 export const projects = [
   {
@@ -114,9 +115,16 @@ export const projects = [
     period: "2025.5.14 ~ 2023.06.07",
     image: SnartPlateImage,
     github: "https://github.com/bibibigg/SmartPlate",
+    link: "https://smart-plate-kappa.vercel.app",
     demo: "",
     color: "from-orange-500 to-red-600",
     item: [
+      {
+        title: "railway와 vercel을 이용한 프론트/백엔드 배포 및 연동",
+        content: [
+          "백엔드는 railway, 프론트엔드는 vercel을 이용하여 배포하였으며, REST API를 통해 프론트엔드와 백엔드 간의 데이터 통신을 구현",
+        ],
+      },
       {
         title: "Redux Toolkit을 통한 전역 상태 관리",
         content: [

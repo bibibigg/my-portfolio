@@ -2,6 +2,7 @@ import Modal from "../UI/Modal";
 import { FaGithub } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import InfoItem from "./InfoItem";
+import { FiLink } from "react-icons/fi";
 
 export default function ProjectModal({ onClose, project, isDark }) {
   return (
@@ -46,6 +47,20 @@ export default function ProjectModal({ onClose, project, isDark }) {
             <InfoItem label="참여인원" value={project?.member} />
 
             <InfoItem label="기간" value={project?.period} />
+
+            {project?.link && (
+              <InfoItem label="링크">
+                <div className="">
+                  <a href={project.link}>
+                    {isDark ? (
+                      <FiLink color="white" size={25} />
+                    ) : (
+                      <FiLink color="black" size={25} />
+                    )}
+                  </a>
+                </div>
+              </InfoItem>
+            )}
 
             {project.github && (
               <InfoItem label="github">
