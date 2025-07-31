@@ -27,18 +27,18 @@ export default function ProjectGrid({ projects, isDark }) {
     },
   };
 
-  // const itemVariants = {
-  //   hidden: { opacity: 0, y: 50, scale: 0.9 },
-  //   visible: {
-  //     opacity: 1,
-  //     y: 0,
-  //     scale: 1,
-  //     transition: {
-  //       duration: 0.6,
-  //       ease: "easeOut",
-  //     },
-  //   },
-  // };
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50, scale: 0.9 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
 
   return (
     <motion.div
@@ -51,7 +51,7 @@ export default function ProjectGrid({ projects, isDark }) {
       {projects.map((project) => (
         <motion.div
           key={project.id}
-          // variants={itemVariants}
+          variants={itemVariants}
           whileHover={{ y: -10, scale: 1.02 }}
           // onHoverStart={() => setHoveredProject(project.id)}
           // onHoverEnd={() => setHoveredProject(null)}
