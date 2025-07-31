@@ -16,7 +16,7 @@ export default function MainIntroContent({
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0 }}
-        className="text-[42px] md:text-7xl w-full font-bold mb-6"
+        className="text-[42px] md:text-7xl font-bold mb-6"
       >
         <motion.span
           initial={{ opacity: 0, y: -20 }}
@@ -59,7 +59,7 @@ export default function MainIntroContent({
       <motion.div
         // ref={parentRef}
         style={{ opacity: opacity }}
-        className="fixed top-16 min-h-screen flex flex-col justify-center text-center px-4 w-full"
+        className="fixed overflow-hidden max-w-[1980px] left-0 right-0 mx-auto top-16 min-h-screen flex flex-col justify-center text-center px-4"
       >
         {commonContent}
       </motion.div>
@@ -67,7 +67,7 @@ export default function MainIntroContent({
   }
 
   return (
-    <div className=" top-16 min-h-screen flex flex-col justify-center text-center px-4 w-full">
+    <div className=" top-16 min-h-screen flex flex-col justify-center text-center px-4">
       {commonContent}
     </div>
   );
