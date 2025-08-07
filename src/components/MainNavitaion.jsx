@@ -45,11 +45,11 @@ export default function MainNavigation() {
       <header
         className={`fixed w-full h-16 flex items-center p-4 z-50 ${
           isScrolled
-            ? "backdrop-blur-md bg-white/60 dark:bg-gray-900/70 shadow-lg border-b border-gray-200/20 supports-[backdrop-filter]:bg-white/40 supports-[backdrop-filter]:dark:bg-gray-900/30"
+            ? "backdrop-blur-md bg-white/60 dark:bg-gray-900/70 shadow-lg border-b border-gray-200/20"
             : "bg-transparent"
         }`}
       >
-        <nav className="flex w-full justify-between gap-4 ">
+        <nav className="flex w-full justify-between gap-4 lg:px-4">
           <div className="flex-shrink-0">
             <h1 className="text-2xl font-bold text-yellow-500 dark:text-yellow-300 mb-1">
               Son Byeongjin
