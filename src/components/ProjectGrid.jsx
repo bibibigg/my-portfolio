@@ -46,7 +46,7 @@ export default function ProjectGrid({ projects, isDark }) {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-96 md:max-w-5xl"
+      className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-96 md:max-w-5xl cursor-pointer"
     >
       {projects.map((project) => (
         <motion.div
