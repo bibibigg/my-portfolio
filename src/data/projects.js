@@ -13,6 +13,7 @@ export const projects = [
       "next.js",
       "TypeScript",
       "supabase",
+      "zustand",
       "React",
       "Tailwind CSS",
       "vercel",
