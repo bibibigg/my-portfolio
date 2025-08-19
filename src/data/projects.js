@@ -2,9 +2,43 @@ import carrotThunderImage from "../assets/CarrotThunder.png";
 import myPortfolioImage from "../assets/my-portfolio.png";
 import SnartPlateImage from "../assets/SmartPlate.png";
 import chatting from "../assets/chatting.PNG";
-import { li } from "framer-motion/client";
+import Amadeus from "../assets/Amadeus.png";
 
 export const projects = [
+  {
+    id: 5,
+    title: "Amadeus",
+    description: "가상 드럼패드 머신을 활용하여 즐기는 웹 애플리케이션",
+    tags: [
+      "next.js",
+      "TypeScript",
+      "supabase",
+      "React",
+      "Tailwind CSS",
+      "vercel",
+    ],
+    member: "개인",
+    period: "2025.8.01 ~ ",
+    image: Amadeus,
+    github: "https://github.com/bibibigg/amadeus",
+    link: "https://amadeus-swart.vercel.app/beatmaker",
+    demo: "",
+    color: "from-pink-500 to-violet-600",
+    item: [
+      {
+        title: "Web Audio API, 버퍼를 사용한 오디오 재생",
+        content: [
+          "Audio 객체를 사용해 오디오를 재생했지만, 일정 시간이 지나면 메모리에서 제거되어 재로딩이 필요했던 문제를 Web Audio API의 버퍼를 활용해 오디오 데이터를 메모리에 저장하고 재생하도록 구현하여 해결",
+        ],
+      },
+      {
+        title: "BPM에 맞춘 메트로놈 소리 재생",
+        content: [
+          "Web Audio API를 사용해 메트로놈 클릭 사운드를 생성하고, setInterval로 BPM에 맞춰 반복 재생되도록 구현",
+        ],
+      },
+    ],
+  },
   {
     id: 4,
     title: "AiChat",
