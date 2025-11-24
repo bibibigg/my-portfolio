@@ -157,9 +157,9 @@ export const projects = [
     color: "from-orange-500 to-red-600",
     item: [
       {
-        title: "railway와 vercel을 이용한 프론트/백엔드 배포 및 연동",
+        title: "GCP와 vercel을 이용한 프론트/백엔드 배포 및 연동",
         content: [
-          "백엔드는 railway, 프론트엔드는 vercel을 이용하여 배포하였으며, REST API를 통해 프론트엔드와 백엔드 간의 데이터 통신을 구현",
+          "백엔드는 GCP, 프론트엔드는 vercel을 이용하여 배포하였으며, REST API를 통해 프론트엔드와 백엔드 간의 데이터 통신을 구현, GCP는 githubActions를 통해 자동 배포 파이프라인 구축",
         ],
       },
       {
