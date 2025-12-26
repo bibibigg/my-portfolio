@@ -149,7 +149,7 @@ export const projects = [
       "vite",
     ],
     member: "개인",
-    period: "2025.5.14 ~ 2023.06.07",
+    period: "2025.5.14 ~ 2025.06.07",
     image: SnartPlateImage,
     github: "https://github.com/bibibigg/SmartPlate",
     link: "https://smart-plate-kappa.vercel.app",
