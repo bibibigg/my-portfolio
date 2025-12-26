@@ -185,6 +185,15 @@ export const projects = [
         ],
       },
       {
+        title: "OpenAI Vision API를 통한 AI 음식 이미지 분석",
+        content: [
+          "GPT-5.2 모델의 Vision 기능으로 음식 사진 자동 인식 및 영양소 분석",
+          "Base64 인코딩을 통한 이미지 전송 및 Structured Outputs(Zod)로 타입 안전한 JSON 응답",
+          "자동으로 칼로리, 단백질, 탄수화물, 지방 추정 및 확신도 제공",
+          "Zustand를 통한 이미지 분석 상태 관리",
+        ],
+      },
+      {
         title: "Tailwind CSS를 통한 스타일링 및 다크모드 적용",
         content: [
           "유틸리티 우선 CSS 프레임워크로 빠른 스타일링",
