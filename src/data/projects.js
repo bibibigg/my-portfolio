@@ -112,8 +112,10 @@ export const projects = [
         ],
       },
       {
-        title: "zustand를 통한 전역상태 관리",
-        content: ["다크모드, 모달 상태 등을 zustand를 통해 전역으로 관리"],
+        title: "Redux를 통한 전역상태 관리",
+        content: [
+          "다크모드, 모달 상태, 선택된 프로젝트 정보 등을 Redux를 통해 전역으로 관리",
+        ],
       },
       {
         title: "vercel을 이용한 배포",
@@ -138,7 +140,7 @@ export const projects = [
     tags: [
       "React 19",
       "TypeScript",
-      "Redux",
+      "Zustand",
       "Tanstack-Query",
       "React-Router",
       "Tailwind CSS",
@@ -163,10 +165,9 @@ export const projects = [
         ],
       },
       {
-        title: "Redux Toolkit을 통한 전역 상태 관리",
+        title: "Zustand을 통한 전역 상태 관리",
         content: [
           "모달 상태, 다크모드 상태 등 전역적으로 관리할 상태를 중앙 집중식으로 관리",
-          "Redux Toolkit의 간소화된 문법으로 보일러플레이트 코드 최소화",
         ],
       },
       {
