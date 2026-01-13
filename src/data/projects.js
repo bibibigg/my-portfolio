@@ -112,10 +112,8 @@ export const projects = [
         ],
       },
       {
-        title: "Redux를 통한 전역상태 관리",
-        content: [
-          "다크모드, 모달 상태, 선택된 프로젝트 정보 등을 Redux를 통해 전역으로 관리",
-        ],
+        title: "zustand를 통한 전역상태 관리",
+        content: ["다크모드, 모달 상태 등을 zustand를 통해 전역으로 관리"],
       },
       {
         title: "vercel을 이용한 배포",
