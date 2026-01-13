@@ -1,84 +1,84 @@
 import carrotThunderImage from "../assets/CarrotThunder.png";
 import myPortfolioImage from "../assets/my-portfolio.png";
-import SnartPlateImage from "../assets/SmartPlate.png";
-import chatting from "../assets/chatting.PNG";
-import Amadeus from "../assets/Amadeus.png";
+import SmartPlateImage from "../assets/SmartPlate.png";
+// import chatting from "../assets/chatting.PNG";
+// import Amadeus from "../assets/Amadeus.png";
 
 export const projects = [
-  {
-    id: 5,
-    title: "Amadeus",
-    description: "가상 드럼패드 머신을 활용하여 즐기는 웹 애플리케이션",
-    tags: [
-      "next.js",
-      "TypeScript",
-      "supabase",
-      "zustand",
-      "React",
-      "Tailwind CSS",
-      "vercel",
-    ],
-    member: "개인",
-    period: "2025.8.01 ~ ",
-    image: Amadeus,
-    github: "https://github.com/bibibigg/amadeus",
-    link: "https://amadeus-swart.vercel.app/beatmaker",
-    demo: "",
-    color: "from-pink-500 to-violet-600",
-    item: [
-      {
-        title: "Web Audio API, 버퍼를 사용한 오디오 재생",
-        content: [
-          "Audio 객체를 사용해 오디오를 재생했지만, 일정 시간이 지나면 메모리에서 제거되어 재로딩이 필요했던 문제를 Web Audio API의 버퍼를 활용해 오디오 데이터를 메모리에 저장하고 재생하도록 구현하여 해결",
-        ],
-      },
-      {
-        title: "BPM에 맞춘 메트로놈 소리 재생",
-        content: [
-          "Web Audio API를 사용해 메트로놈 클릭 사운드를 생성하고, setInterval로 BPM에 맞춰 반복 재생되도록 구현",
-        ],
-      },
-    ],
-  },
-  {
-    id: 4,
-    title: "AiChat",
-    description:
-      "AI툴을 적극 활용한 채팅방 구현 및 GeminiAPI를 사용한 AI와의 대화",
-    tags: [
-      "AI",
-      "GeminiAPI",
-      "Cousor",
-      "supabase",
-      "Node.js",
-      "socket.io",
-      "React",
-      "TypeScript",
-      "railway",
-      "vercel",
-    ],
-    member: "개인",
-    period: "2025.7.15",
-    image: chatting,
-    github: "https://github.com/bibibigg/aichat",
-    link: "https://aichat-wine-gamma.vercel.app/",
-    demo: "",
-    color: "from-pink-500 to-violet-600",
-    item: [
-      {
-        title: "실시간 AI 채팅 기능",
-        content: [
-          "구현된 채팅기능에 GeminiAPI를 사용하여 모든 채팅방에 AI유저가 상주하여 혼자 있더라도 채팅을 할 수 있도록 구현\n 모델은 gemini-2.5-flash 모델을 사용하였으며 간단한 대화에 최적화 하기위해 사고 기능을 비활성화하여 빠른 반응을 보이며 토큰 사용량 절감",
-        ],
-      },
-      {
-        title: "Cursor를 이용한 풀스택 구현",
-        content: [
-          "Cursor를 적극 이용하여 DB설계와 백엔드, 프론트엔드의 기능구현을 진행하여 매우 짧은 기간 내 기능을 구현",
-        ],
-      },
-    ],
-  },
+  // {
+  //   id: 5,
+  //   title: "Amadeus",
+  //   description: "가상 드럼패드 머신을 활용하여 즐기는 웹 애플리케이션",
+  //   tags: [
+  //     "next.js",
+  //     "TypeScript",
+  //     "supabase",
+  //     "zustand",
+  //     "React",
+  //     "Tailwind CSS",
+  //     "vercel",
+  //   ],
+  //   member: "개인",
+  //   period: "2025.8.01 ~ ",
+  //   image: Amadeus,
+  //   github: "https://github.com/bibibigg/amadeus",
+  //   link: "https://amadeus-swart.vercel.app/beatmaker",
+  //   demo: "",
+  //   color: "from-pink-500 to-violet-600",
+  //   item: [
+  //     {
+  //       title: "Web Audio API, 버퍼를 사용한 오디오 재생",
+  //       content: [
+  //         "Audio 객체를 사용해 오디오를 재생했지만, 일정 시간이 지나면 메모리에서 제거되어 재로딩이 필요했던 문제를 Web Audio API의 버퍼를 활용해 오디오 데이터를 메모리에 저장하고 재생하도록 구현하여 해결",
+  //       ],
+  //     },
+  //     {
+  //       title: "BPM에 맞춘 메트로놈 소리 재생",
+  //       content: [
+  //         "Web Audio API를 사용해 메트로놈 클릭 사운드를 생성하고, setInterval로 BPM에 맞춰 반복 재생되도록 구현",
+  //       ],
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 4,
+  //   title: "AiChat",
+  //   description:
+  //     "AI툴을 적극 활용한 채팅방 구현 및 GeminiAPI를 사용한 AI와의 대화",
+  //   tags: [
+  //     "AI",
+  //     "GeminiAPI",
+  //     "Cousor",
+  //     "supabase",
+  //     "Node.js",
+  //     "socket.io",
+  //     "React",
+  //     "TypeScript",
+  //     "railway",
+  //     "vercel",
+  //   ],
+  //   member: "개인",
+  //   period: "2025.7.15",
+  //   image: chatting,
+  //   github: "https://github.com/bibibigg/aichat",
+  //   link: "https://aichat-wine-gamma.vercel.app/",
+  //   demo: "",
+  //   color: "from-pink-500 to-violet-600",
+  //   item: [
+  //     {
+  //       title: "실시간 AI 채팅 기능",
+  //       content: [
+  //         "구현된 채팅기능에 GeminiAPI를 사용하여 모든 채팅방에 AI유저가 상주하여 혼자 있더라도 채팅을 할 수 있도록 구현\n 모델은 gemini-2.5-flash 모델을 사용하였으며 간단한 대화에 최적화 하기위해 사고 기능을 비활성화하여 빠른 반응을 보이며 토큰 사용량 절감",
+  //       ],
+  //     },
+  //     {
+  //       title: "Cursor를 이용한 풀스택 구현",
+  //       content: [
+  //         "Cursor를 적극 이용하여 DB설계와 백엔드, 프론트엔드의 기능구현을 진행하여 매우 짧은 기간 내 기능을 구현",
+  //       ],
+  //     },
+  //   ],
+  // },
   {
     id: 1,
     title: "my-portfolio",
@@ -138,19 +138,21 @@ export const projects = [
     description:
       "사용자의 신체 정보와 식사 정보를 기반으로 식사 칼로리를 관리하는 웹 어플리케이션",
     tags: [
-      "React",
+      "React 19",
+      "TypeScript",
       "Redux",
       "Tanstack-Query",
       "React-Router",
       "Tailwind CSS",
       "Framer-motion",
-      "railway",
+      "GCP",
+      "OpenAI API",
       "vercel",
       "vite",
     ],
     member: "개인",
     period: "2025.5.14 ~ 2025.06.07",
-    image: SnartPlateImage,
+    image: SmartPlateImage,
     github: "https://github.com/bibibigg/SmartPlate",
     link: "https://smart-plate-kappa.vercel.app",
     demo: "",
